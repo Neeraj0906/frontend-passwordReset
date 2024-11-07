@@ -11,7 +11,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:6000/api/auth/login", { email, password });
+            const response = await axios.post("http://backend-password-reset-1jmk.onrender.com/api/auth/login", { email, password });
             setMessage(response.data.message);
             // Handle successful login (e.g., redirect or store token)
         } catch (error) {

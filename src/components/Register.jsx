@@ -11,7 +11,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:6000/api/auth/register', { email, password });
+            const response = await axios.post('http://backend-password-reset-1jmk.onrender.com/api/auth/register', { email, password });
             setMessage(response.data.message);
         } catch (error) {
             setMessage(error.response?.data?.error || 'An error occurred');
