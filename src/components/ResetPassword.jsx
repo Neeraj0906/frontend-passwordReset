@@ -12,7 +12,7 @@ const ResetPassword = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`http://backend-password-reset-1jmk.onrender.com/api/auth/reset-password/${token}`, { password });
+            const response = await axios.post(`https://backend-password-reset-1jmk.onrender.com/api/auth/reset-password/${token}`, { password });
             setMessage(response.data.message);
         } catch (error) {
             setMessage(error.response?.data?.error || 'An error occurred');

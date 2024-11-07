@@ -10,7 +10,7 @@ const ForgotPassword = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://backend-password-reset-1jmk.onrender.com/api/auth/forgot-password', { email });
+            const response = await axios.post('https://backend-password-reset-1jmk.onrender.com/api/auth/forgot-password', { email });
             setMessage(response.data.message);
         } catch (error) {
             setMessage(error.response?.data?.error || 'An error occurred');
