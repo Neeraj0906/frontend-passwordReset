@@ -13,14 +13,21 @@ const App = () => {
         //     <Register />
         //     <Login />
         // </div>
-         <Router>
-         <Routes>
-           <Route path="/" element={<Register/>} /> {/* 👈 Renders at /app/ */}
-           <Route path="/login" element={<Login/>} />
-           <Route path="/forgetpassword" element={<ForgotPassword/>} />
-           <Route path="/resetpassword/:token" element={<ResetPassword/>} />
-         </Routes>
-       </Router>
+        <>
+            
+            <nav>
+                <a href="/login">login</a>
+                <a href="/">register</a>
+                <a href="/forgetpassword">Forgetpassword</a>
+
+            </nav><Router>
+                <Routes>
+                    <Route path="/" element={<Register />} /> {/* 👈 Renders at /app/ */}
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/forgetpassword" element={<ForgotPassword />} />
+                    <Route path="/resetpassword/:token" element={<ResetPassword />} />
+                </Routes>
+            </Router></>
     );
 };
 
